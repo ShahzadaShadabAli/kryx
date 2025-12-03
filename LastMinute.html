@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Revision Notes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+
+        body {
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f0;
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 50px;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #e5e5e0;
+        }
+
+        h1 {
+            color: #1d1d1f;
+            font-size: 2.8em;
+            margin-bottom: 10px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            color: #86868b;
+            font-size: 1.1em;
+            font-weight: 400;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            padding: 25px;
+            background: #fafaf8;
+            border-radius: 12px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+            color: #1d1d1f;
+            font-size: 1.5em;
+            font-weight: 800;
+            letter-spacing: -0.3px;
+        }
+
+        .content {
+            color: #1d1d1f;
+            font-size: 1em;
+            white-space: pre-wrap;
+            font-family: 'Poppins', monospace;
+            line-height: 1.7;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .section-header {
+                font-size: 1.3em;
+            }
+
+            .content {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+
+        <div class="section">
+            <div class="section-header">
+                📄 File Handling
+            </div>
+            <div class="content">file = open("names.txt", "w") #can be r and a
+file.readline()
+file.readlines() #all lines in an array
+file.read()
+file.write(f"This\n") #always a new line
+for line in file
+file.close()
+.strip()</div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                ℹ️ General
+            </div>
+            <div class="content">Commented Psuedocode declaration
+when float is mention try to show 10.0 instead of 10 in inputs
+Sometimes 0 cannot be an initialization value
+Linked list properties are public</div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                🔤 Basic String
+            </div>
+            <div class="content"># name = "Shahzada Shadab"
+# firstName = name[0:8]
+# lastName = name[9:len(name)] or name[9:]</div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                🔄 Reverse Array
+            </div>
+            <div class="content">originalArr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+oppArr = [0]*len(originalArr)
+startPoint = len(originalArr) - 1
+for i in range (len(originalArr)):
+    oppArr[startPoint] = originalArr[i]
+    startPoint = startPoint - 1</div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                ⚠️ Exception Handling
+            </div>
+            <div class="content">You can have multiple exception for the same try
+ValueError
+ZeroDivisionError
+IOError</div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                📅 Date Time
+            </div>
+            <div class="content">import datetime
+datetime.datetime(2025, 12, 2)
+age = todaydate.year - dateofbirth.year 
+todaytime = datetime.time(4, 6, 7)
+print(todaytime.hour)</div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                🧱 OOP
+            </div>
+            <div class="content">super().__init__(don't include self here)
+cannot access parent properties in child class thats why we use super().getName() to get it!
+when a new property to be created with specific requirement for the child make the general one in parent and modify it in child
+ def outputPositions (self):
+        print("Horizontal Position ", self.__HorizontalPosition)
+        print("Current Speed ", self.__CurrentSpeed)
+  def outputPositions (self):
+        super().outputPositions()
+        print("Vertical Position ", self.__VerticalPosition)
+If we exceed a value limit is applied to the value
+ if (self.__CurrentSpeed > self.__MaxSpeed):
+                self.__CurrentSpeed = self.__MaxSpeed</div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                ➕ Linear Enqueue
+            </div>
+            <div class="content">Check if backPointer != 10 queue is full
+if topPointer is -1 then make it 0
+increment the backPointer</div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                ➖ Linear Dequeue
+            </div>
+            <div class="content">if topPointer != -1 then remove using the current topPointer index
+increment the topPointer
+if headPointer == startPointer then reinitialize</div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                ➕ Linear Enqueue
+            </div>
+            <div class="content">Number of items < 10
+check if rearPointer == at the end of the array
+yes then take it to the first if no then increment</div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                ➖ Linear Dequeue
+            </div>
+            <div class="content">number of items > 0
+check if topPointer == at the end of the array
+yes then take it to the first if no then increment</div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                🔁 Recursion
+            </div>
+            <div class="content">main condition:
+	return 1+fnc()
+else:
+	return 0 # the zero here is pretty crucial</div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                🌳 Binary Tree
+            </div>
+            <div class="content">binaryTree = [[0]*3 for x in range (20)]
+rootPointer = -1
+freeNode = 0
+
+# Addition
+def addToTree (data):
+    global binaryTree 
+    global rootPointer 
+    global freeNode
+
+    if freeNode <= 19: #creating the node
+        binaryTree[freeNode][0] = -1 
+        binaryTree[freeNode][1] = data 
+        binaryTree[freeNode][2] = -1 
+
+        # if it is the first value in tree
+        if rootPointer == -1:
+            rootPointer = 0
+        else:
+            currentPointer = rootPointer
+            inserted = False
+            while inserted == False:
+                if data < binaryTree[currentPointer][1]: # if the data smaller than the node value
+                    if binaryTree[currentPointer][0] == -1 # checking if its left child area is empty
+                        binaryTree[currentPointer][0] = freeNode # if true then adding the new node to that position
+                        inserted = True
+                    else:
+                        currentPointer = binaryTree[currentPointer][0] # if thats not the case than we will inspect the left child
+                else: # if the data larger than the node value
+                      if binaryTree[currentPointer][2] == -1 # checking if its right child area is empty
+                        binaryTree[currentPointer][2] = freeNode # if true then adding the new node to that position
+                        inserted = True
+                    else:
+                        currentPointer = binaryTree[currentPointer][2] # if thats not the case than we will inspect the left child
+            
+        freeNode = freeNode + 1
+
+    else:
+        print("Tree is full")
+
+def findNode (data):
+    global binaryTree
+    global rootPointer
+
+    currentPointer = rootPointer
+
+    while currentPointer != -1 and data != binaryTree[currentPointer][1]: 
+        if data < binaryTree[currentPointer][1]: 
+            currentPointer = binaryTree[currentPointer][1]
+        else:
+            currentPointer = binaryTree[currentPointer][1]
+
+    return currentPointer
+
+
+# There is a pattern
+def Inorder (Array, root):
+    if Array[root][0] != -1:
+        Inorder(Array, Array[root][0])
+    print(str(Array[root][1]))
+    if Array[root][2] != -1"
+        Inorder(Array, Array[root][2])</div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                🔍 Binary Search
+            </div>
+            <div class="content">data = [1, 2, 4, 7, 9, 23, 45, 67, 89, 111, 345, 654, 752]
+
+def binarySearch (num):
+    global data
+    upperbound = len(data) - 1
+    lowerbound = 0
+
+    notInList = False
+    found = False
+
+    while notInList == False and found == False:
+        midpoint = int((upperbound + lowerbound) / 2)
+        if data[midpoint] == num:
+            found = True
+            return True
+        elif num > data[midpoint]: # if num to be found greater than midpoint
+            lowerbound = midpoint + 1 # we wont look at the numbers less than midpoint
+        elif num < data[midpoint] : # if number to be found less than midpoint
+            upperbound = midpoint - 1 # we wont look at the numbers greater than midpoint
+        
+        if lowerbound > upperbound: # not found condition
+            notInList = True
+            return False
+
+print(binarySearch(4))</div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                🫧 Bubble Sort
+            </div>
+            <div class="content"># Bubble Sort
+def bubbleSort (data):
+    swapped = True
+    upperbound = len(data) - 1
+    while swapped == True:
+        swapped = False
+        for j in range(upperbound):
+            if data[j] > data[j+1]:
+                # Swapping code
+                temp = data[j]
+                data[j] = data[j+1]
+                data[j+1] = temp
+                swapped = True
+        upperbound = upperbound - 1 
+    return data
+
+print(bubbleSort(data))</div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                📥 Insertion Sort
+            </div>
+            <div class="content">#Insertion Sort:
+def InsertionSort(data):
+    for i in range(len(data)):
+        currentData = data[i]
+        counter = i
+        while counter > 0 and data[counter - 1] < currentData:  # Changed > to < for descending order
+            
+            data[counter] = data[counter - 1]  # Swap
+            counter = counter - 1
+
+        data[counter] = currentData  # Add the number swapped
+
+    return data
+
+print(InsertionSort(data))</div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                🔗 Linked List
+            </div>
+            <div class="content">#Linked List
+class node:
+    def __init__(self, dataP, pointerP):
+        self.data = dataP
+        self.pointer = pointer
+
+def unorderedAddItem (startPointer, data):
+    global linkedList;
+    global emptyList;
+
+    # Check if array is full or not
+    if (emptyList > 9 or emptyList < 0):
+        return False
+    else:
+        freeList = emptyList # Next Free Postition to insert data
+        emptyList = linkedList[emptyList].pointer # Now that we are added new data, we need to update the empty list pointer
+
+        linkedList[freeList] = node(data, -1) # added data at the end
+
+        lastNodeIndex = 0;
+
+        # But wait! isnt there already a node have -1 as its ending? time to fix that!
+        while startPointer != -1: #Until we reach the end of the original list before addition
+            lastNodeIndex = startPointer #at the end of the loop this var will the the last original node index
+            startPointer = linkedList[startPointer].pointer
+        # Now that I have the last node we need to update it to have it pointed at the new node instead of -1
+        linkedList[lastNodeIndex].pointer = freeList
+
+        return True
+
+
+def deleteNode(data):
+    global linkedList
+    global startPointer
+    global emptyList
+
+    currentPointer = startPointer #this var is used to loop through the list
+    prevPointer = 0
+
+    # Loop through until end of the list or when the data is found
+
+    while (currentPointer != -1 and linkedList[currentPointer].data != data):
+        prevPointer = currentPointer
+        currentPointer = linkedList[currentPointer].pointer
+
+    #End of list reached but data not found
+    if (currentPointer == -1):
+        return False
+    else:
+        if (currentPointer == startPointer): #if the first node is to be removed
+            startPointer = linkedList[startPointer].pointer
+        else:
+            linkedList[prevPointer].pointer = linkedList[currentPointer].pointer #assigning the pointer value of the node to be removed in the prev pointer, resulting in the skipping of the node to be removed
+        
+        linkedList[currentPointer].data = 0
+        linkedList[currentPointer].pointer = emptyList #removed node now points at the node previously pointed by the empty list
+        emptyList = currentPointer #the index value of the removed node assigned to empty list
+
+
+def orderedLinkedListAddition(data):
+    global linkedList
+    global startPointer
+    global emptyList
+
+    #check if the list if full or not
+    if (emptyList < 0 and emptyList > 9):
+        return False
+
+    freeList = emptyList # take a node from emptyList
+    emptyList = linkedList[emptyList].pointer # update the emptyList Value
+
+    linkedList[freeList] = node(data, -1)
+
+    currentPointer = startPointer
+    prevPointer = 0
+
+    while (currentPointer != -1 and linkedList[currentPointer].data < data): #searching until the end of file oder when we find the correct location in ascending order
+        prevPointer = currentPointer
+        currentPointer = linkedList[currentPointer].pointer
+
+    if (currentPointer == startPointer): # if we need to add it at the starting
+        linkedList[freeList].pointer = startPointer
+        startPointer = freeList
+    else: #if in the middle, prev pointer will have the index of our freelist and the freelist now points at the node pointed by the prev
+        linkedList[freeList].pointer = linkedList[prevPointer].pointer
+        linkedList[prevPointer].pointer = freeList
+    return True</div>
+        </div>
+    </div>
+</body>
+</html>
